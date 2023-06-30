@@ -1,0 +1,76 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+		"import React & creer un composant stateless": {
+		"prefix": "imp-r-sl",// (import r stateless) A definir soit même, on peut mettre le nom que l on veut afin qu'il soit bien repérable pour pouvoir l utiliser au plus vite
+		"body": [
+			"import React from \"react\"; \n",//\n = sauter une ligne
+
+			"const ${component} = (props) => (",//${component} = permet de nommer plus facilement
+   
+			"\t//Ecrire le code ici", //\t = tabulation = permet au code d'être bien rangé
+	");\n",
+
+		"export default ${component};"
+		],
+		"description": "Import React & creer un composant stateless"
+	},
+
+	"import React & creer un composant statefull": {
+		"prefix": "imp-r-sf",// (import r statefull) A definir soit même, on peut mettre le nom que l on veut afin qu'il soit bien repérable pour pouvoir l utiliser au plus vite
+		"body": [
+			"import React, { Component } from 'react';\n",
+
+				"class  ${component} extends Component{",
+				"\trender() {",
+					"\t\treturn (",
+					"\t\t\t//Ecrire le code ici",
+				"\t\t);",
+				"\t}",
+			"}\n",
+				"export default ${composant};",
+		],
+
+		"description": "Import React & creer un composant statefull"
+	}
+
+
+}
+
+//On va pouvoir maintenant sur n importe quel fichier JS juste en tapant import pour pouvoir importer le code ci dessus et ainsi gagner du temps
+
+// Un composant Stateless, également connu sous le nom de composant sans état ou composant fonctionnel, est un concept dans la 
+// programmation des interfaces utilisateur (UI) qui se réfère à un type de composant qui ne maintient pas d'état interne. 
+// Un composant Stateless est principalement défini par ses entrées (props) et génère une sortie (UI) basée uniquement sur ces entrées.
+
+// Voici quelques caractéristiques d'un composant Stateless :
+// 1. Absence d'état interne : Un composant Stateless ne conserve pas de données ou d'état interne. Il ne gère pas ses propres données,
+//  mais utilise plutôt les données fournies par ses propres props (propriétés) pour générer l'interface utilisateur.
+
+// 2. Basé sur les props : Un composant Stateless reçoit des données sous forme de props. Ces props sont passées au composant en tant 
+// que paramètres lorsqu'il est utilisé dans un autre composant. Le composant utilise ces props pour générer dynamiquement l'UI en
+//  fonction des données reçues.
+
+// 3. Logique minimale : Étant donné que les composants Stateless ne gèrent pas leur propre état, ils contiennent généralement une 
+// logique minimale. Leur principale responsabilité est de transformer les données fournies par les props en éléments d'interface 
+// utilisateur.
+
+// 4. Réutilisabilité : Les composants Stateless sont souvent réutilisables car ils ne dépendent pas de leur état interne spécifique. 
+// Ils peuvent être utilisés dans différents contextes en leur fournissant simplement les données appropriées via les props.
+
+// L'utilisation de composants Stateless peut contribuer à la simplicité et à la modularité du code, car ils se concentrent 
+// uniquement sur la transformation des données d'entrée en sortie UI, sans se soucier de la gestion de l'état interne. 
+// Ils sont couramment utilisés dans les frameworks et bibliothèques de développement d'interfaces utilisateur tels que React, Vue.js,
+//  Angular, etc.
